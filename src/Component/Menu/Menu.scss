@@ -1,6 +1,19 @@
+@import "~breakpoint-sass";
+
+$bk-desktop: 1440px;
+$bk-table-landscape: 1085px 811px;
+$bk-table: 811px 611px;
+$bk-phone: 611px 0px;
+
 header {
   display: flex;
   width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($bk-phone){
+    font-size: 16px;
+  }
 }
 
 .MagicWand {
@@ -12,6 +25,8 @@ header {
   text-align: center;
   text-transform: uppercase;
   transition: 1s;
+  text-decoration: none;
+  color: #1B1B1B;
 
   &:hover {
     background-color: #F0A3AD;
@@ -32,6 +47,9 @@ header {
   text-align: center;
   text-transform: uppercase;
   transition: 1s;
+  text-decoration: none;
+  color: #1B1B1B;
+
   &:hover {
     background-color: #F0A3AD;
     transition: 0.4s;

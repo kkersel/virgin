@@ -6,7 +6,7 @@
   user-select: none;
 }
 
-@import "node_modules/breakpoint-sass";
+@import "~breakpoint-sass";
 $bk-desktop: 1440px;
 $bk-table-landscape: 1085px 811px;
 $bk-table: 811px 611px;
@@ -41,6 +41,7 @@ body {
     padding-top: 5px;
     color: #000000;
     opacity: 0.8;
+    text-decoration: none;
   }
 }
 

@@ -1,0 +1,64 @@
+@import "~breakpoint-sass";
+
+$bk-desktop: 1440px;
+$bk-table-landscape: 1085px 811px;
+$bk-table: 811px 611px;
+$bk-phone: 611px 0px;
+
+.WrapperBack {
+  background: url("/images/bgFooter.png");
+  background-size: cover;
+  height: 615px;
+  width: 100%;
+}
+
+.Wrapper {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 150px;
+
+  .DBK {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    color: #F8C0C7;
+  }
+
+  .SocialWrapper {
+    @include breakpoint($bk-phone){
+      display: flex;
+    }
+    .social {
+      height: 100px;
+      width: 100px;
+      background: #F8C0C7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      margin: 15px;
+      transition: 1s;
+
+      &:hover {
+        background-color: #F0A3AD;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  @include breakpoint($bk-phone) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 75px;
+    .DBK {
+      padding: 50px;
+    }
+  }
+}

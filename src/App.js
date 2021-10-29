@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import MagicWand from "./magicWand/MagicWand";
+// import './App.css'
+import Ava from "./AVA/AVA";
+import {BrowserRouter, Route} from "react-router-dom";
+import MainPage from "./MainPage/MainPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Route path="/MainPage" render={() => <MainPage/> } />
+            <Route path="/MagicWand" render={() => <MagicWand/>} />
+            <Route path="/Ava" render={() => <Ava/>} />
+        </BrowserRouter>
+    );
 }
 
 export default App;

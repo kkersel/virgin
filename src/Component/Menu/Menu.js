@@ -1,16 +1,18 @@
 import React from 'react'
 import './Menu.scss'
-// import '../magicWand/MagicWand.scss'
+import {NavLink} from "react-router-dom";
+
 
 export const Menu = () => {
     return (
       <header>
-          <div className="MagicWand">
+          <NavLink to="/MagicWand" className="MagicWand">
               MAGIC WAND
-          </div>
-          <div className="AVA">
+          </NavLink>
+
+          <NavLink to="/Ava" className="AVA">
               AVA
-          </div>
+          </NavLink>
       </header>
     )
 }

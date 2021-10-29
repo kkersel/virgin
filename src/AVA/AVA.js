@@ -1,7 +1,8 @@
 import React from 'react'
 import './Ava.scss'
-import Menu from "../../Component/Menu/Menu";
-import Footer from "../../Component/Footer/Footer";
+import Menu from "../Component/Menu/Menu";
+import Footer from "../Component/Footer/Footer";
+import {NavLink} from "react-router-dom";
 
 export const Ava = () => {
     return (
@@ -10,10 +11,14 @@ export const Ava = () => {
             {/*Первый блок*/}
             <div className="Logo">
                 <div className="image">
-                    <img src="/images/Logo.png" alt="logo"/>
+                    <NavLink to="/MainPage">
+                        <img src="/images/Logo.png" alt="logo"/>
+                    </NavLink>
                 </div>
                 <div>
-                    <h1 className="text_logo">ANIGAV.ADZIP</h1>
+                    <NavLink className="text_logo" to="/MainPage">
+                        <h1 className="text_logo">ANIGAV.ADZIP</h1>
+                    </NavLink>
                 </div>
             </div>
             <div className="MagicWandWrapper">
